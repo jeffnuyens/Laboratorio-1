@@ -1,0 +1,13 @@
+---
+title: "Resultado Problema 1"
+output: rmarkdown::github_document
+date: "2023-08-02"
+author: "Jeff"
+---
+
+```{r cache=TRUE}
+data_frame_unificado <- read.csv("data_frame_unificado.csv")
+head(data_frame_unificado)
+```
+
+
