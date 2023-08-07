@@ -22,3 +22,10 @@ head(data_frame_unificado)
     ## 4          Angel Valdez Alegria  84.75      30         Panel 01-2018   NA    NA
     ## 5 Juan Francisco Portillo Gomez 411.00      30 Camion Grande 01-2018   NA    NA
     ## 6             Luis Jaime Urbano 456.75      30 Camion Grande 01-2018   NA    NA
+
+``` r
+paste("DF has ", nrow(data_frame_unificado), " rows and ", ncol(data_frame_unificado), 
+      " columns", sep = "")
+```
+
+    ## [1] "DF has 2180 rows and 11 columns"

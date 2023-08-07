@@ -1,0 +1,25 @@
+---
+title: "Resultados Problema 2"
+output: rmarkdown::github_document
+date: "2023-08-07"
+author: "Jeff"
+---
+
+```{r cache=TRUE}
+lista_de_vectores <- list(
+  c(1, 2, 3, 3, 4, 4, 5),          
+  c(2, 3, 3, 4, 4, 5, 5, 5),      
+  c(1, 2, 2, 3, 4, 5, 5, 5, 5)     
+)
+
+modas <- lapply(lista_de_vectores, function(vector) {
+  moda <- as.numeric(names(table(vector))[which.max(table(vector))])
+  return(moda)
+})
+
+print(modas)
+
+tabla_modas <- data.frame(Vectores = paste0("Vector ", seq_along(modas)), Modas = unlist(modas))
+print(tabla_modas)
+```
+

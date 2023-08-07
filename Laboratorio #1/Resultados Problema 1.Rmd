@@ -10,4 +10,9 @@ data_frame_unificado <- read.csv("data_frame_unificado.csv")
 head(data_frame_unificado)
 ```
 
+```{r cache=TRUE}
+paste("DF has ", nrow(data_frame_unificado), " rows and ", ncol(data_frame_unificado), 
+      " columns", sep = "")
+
+```
 

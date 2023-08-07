@@ -1,0 +1,16 @@
+---
+title: "Resultados Problema 3"
+output: rmarkdown::github_document
+date: "2023-08-07"
+author: "Jeff"
+---
+
+```{r cache=TRUE}
+library(readr)
+
+ruta_archivo <- "INE_PARQUE_VEHICULAR_080219.txt"
+parque_vehicular <- read_delim(ruta_archivo, delim = "\t")
+#  Se asume que el archivo está tabulado, por lo que usamos delim = "\t" para indicar que el delimitador es un tabulador.
+
+head(parque_vehicular)
+```

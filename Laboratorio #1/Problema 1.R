@@ -13,6 +13,8 @@ leer_archivo_excel <- function(archivo) {
   data_frame <- read_excel(archivo)
   
   # Obtener el mes y año del nombre del archivo
+  # Se utiliza la función gsub() para eliminar la extensión ".xlsx" del nombre del archivo contenido en archivo. 
+  # Esto se hace para obtener el mes y año de cada archivo a partir de su nombre.
   fecha <- gsub(".xlsx", "", archivo)
   
   # Agregar la columna "Fecha" con el mes y año al data frame
@@ -25,7 +27,11 @@ leer_archivo_excel <- function(archivo) {
 lista_data_frames <- lapply(archivos_excel, leer_archivo_excel)
 
 # Unificar todos los data frames en un solo data frame utilizando bind_rows
+# Bind_ rows: concatena verticalmente los data frames, asegurándose de que las columnas coincidan.
 data_frame_unificado <- bind_rows(lista_data_frames)
+
+# Exportar el data frame unificado como un archivo CSV
+write.csv(data_frame_unificado, file = "data_frame_unificado.csv", row.names = FALSE)
 
 # Mostrar el resultado
 print(data_frame_unificado)
